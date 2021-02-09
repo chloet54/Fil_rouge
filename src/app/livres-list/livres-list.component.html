@@ -1,0 +1,3 @@
+<ul class="list-group">
+    <app-livres *ngFor="let tmp of livres" [livreName]="tmp.title" [livreStock]="tmp.Stock" [livreAffiche]="tmp.affiche" [synopsis]="tmp.synopsis" [date]="tmp.date" [id]="tmp._id"></app-livres>
+</ul>

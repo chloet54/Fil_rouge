@@ -1,0 +1,46 @@
+<div *ngIf="livre" class="row">
+    <div class="col-6">
+        <div class="form-group">
+            <label for="">Titre</label>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="livre.title">
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group">
+            <label for="">Affiche</label>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="livre.affiche">
+        </div>
+    </div>
+</div>
+<div class="row" *ngIf="livre">
+    <div class="col-6">
+        <div class="form-group">
+            <label for="">Etat</label>
+            <br>
+            <input type="radio" class="form-control" [value]="true" [(ngModel)]="livre.Stock"> <label class="boutton">En Stock</label> <br>
+            <input type="radio" class="form-control" [value]="false" [(ngModel)]="livre.Stock"> <label class="boutton2">Rutpure</label>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group">
+            <label for="">Date</label>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="livre.date">
+        </div>
+    </div>
+</div>
+<div class="row" *ngIf="livre">
+    <div class="col-12">
+        <div class="form-group">
+            <label for="">Synopsis</label>
+            <br>
+            <textarea name="" id="" cols="30" rows="10" class="form-control" [(ngModel)]="livre.synopsis"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="text-center" *ngIf="livre">
+    <button class="btn btn-outline-warning" (click)="onModif()">Modifier</button>
+</div>
